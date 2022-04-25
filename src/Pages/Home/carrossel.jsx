@@ -1,11 +1,11 @@
-import Jokenpo from "../../Assets/Images/3.png";
+
+import styled from "styled-components";
+import CarrosselCard from "./carrossel-card";
 
 export function Carrossel() {
-  return (
-    <>
-      <img src={Jokenpo} alt="Will's Game" style={{ width: "300px" }} />
-    </>
-  );
+  return <CarrosselCard />;
 }
 
 export default Carrossel;
+
+// ========== STYLED COMPONENTS ==============================

@@ -1,0 +1,15 @@
+.markdown {
+  color: blue;
+  background-color: #171714;
+  width: 98%;
+  height: 600px;
+  padding: 10px;
+}
+.markdown p {
+  color: white;
+  text-align: left;
+}
+
+.markdown h1 {
+  color: yellow;
+}
