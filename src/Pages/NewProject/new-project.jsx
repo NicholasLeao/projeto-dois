@@ -6,11 +6,29 @@ import styles from "../../Styles/markdown.module.css";
 export function NewProject() {
   // STATES
   const [isPreview, SetIsPreview] = useState(false);
-  const [editorState, setEditorState] = useState("");
+  const [projectState, setProjectState] = useState({titulo:"", corpo:"", senha:""});
+  const [submitProjectState, setSubmitProjectState] = useState({});
 
   // EVENT HANDLERS
-  const handlePreviewClick = () => SetIsPreview((s) => !s);
-  const handleTextareaChange = (e) => setEditorState(e.target.value);
+  const handlePreviewClick = (e) => {
+    e.preventDefault();
+    SetIsPreview((s) => !s)
+    
+  
+  };
+  
+
+  function handleChangeForm(e) {
+    setProjectState((prevState) => {
+      return {...prevState, [e.target.name]: e.target.value}
+    })
+  }
+
+  function handleClickSubmit(e) {
+    e.preventDefault();
+    setSubmitProjectState(projectState);
+    console.log(submitProjectState);
+  }
 
   // STYLES
   const markdownBg = `${isPreview ? "#ebba3e" : "#171714"}`;
@@ -19,8 +37,14 @@ export function NewProject() {
   const previewColor = `${isPreview ? "#ebba3e" : "#171714"}`;
 
   // ===== JSX ========================================
+
   return (
+    <form >
     <S_Div>
+      <S_tituloDiv>
+        <h1>Título</h1>
+        <S_input onChange={handleChangeForm} name="titulo" type="text" placeholder="Insira o nome aqui"></S_input>
+      </S_tituloDiv>
       <S_Hud>
         <h1>Editor</h1>
         <S_btnSpan>
@@ -43,11 +67,16 @@ export function NewProject() {
         </S_btnSpan>
       </S_Hud>
       {isPreview ? (
-        <S_textarea value={editorState} onChange={handleTextareaChange} />
+        <S_textarea onChange={handleChangeForm} name="corpo" value={projectState.corpo} />
       ) : (
-        <ReactMarkdown className={styles.markdown}>{editorState}</ReactMarkdown>
+        <ReactMarkdown className={styles.markdown}>{projectState.corpo}</ReactMarkdown>
       )}
+      <S_Hud>
+        <S_input onChange={handleChangeForm} name="senha" type="password" placeholder="Senha"></S_input>
+        <button onClick={handleClickSubmit}>CONFIRMAR</button>
+      </S_Hud>
     </S_Div>
+    </form>
   );
 }
 
@@ -96,3 +125,19 @@ const S_textarea = styled.textarea`
   height: 600px;
   padding: 10px;
 `;
+
+const S_input = styled.input`
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #171714;
+  width: 98%;
+  padding: 10px; 
+  margin-top: 5px;
+`;
+
+const S_tituloDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; 
+  text-align: left;
+`
