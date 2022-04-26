@@ -21,14 +21,16 @@ function App() {
 export default App;
 
 const AppContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  * {
+    font-family: "Roboto", sans-serif;
+
+  }
+  width: auto;
+  height: fit-content;
+
+  background-color: #171714;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
-
-

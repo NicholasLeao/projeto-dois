@@ -31,7 +31,7 @@ export function NewProject() {
 
   // SIDE EFFECT
   useEffect(() => {
-    if (!submitProjectState) return;
+    if (!submitProjectState.corpo) return;
     (async () => {
       try {
         await axios.post(

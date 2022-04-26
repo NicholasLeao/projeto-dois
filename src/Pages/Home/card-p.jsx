@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-function CardPequeno() {
+function CardPequeno(props) {
+  const { data } = props;
   const emoji = ["💣", "🎮", "😁", "⛹️‍♂️", "🎲"];
   return (
     <S_div>
       <span style={{ fontSize: "20px" }}>{`${
         emoji[Math.floor(Math.random() * emoji.length)]
       }`}</span>
-      <h1>Titulo maior para ocupar mais espaco</h1>
+      <h1>{data.titulo}</h1>
     </S_div>
   );
 }
@@ -20,9 +21,14 @@ const S_div = styled.div`
   border: 2px solid #ebba3e;
   margin-bottom: 25px;
   border-radius: 15px;
-  padding: 10px 25px;
+  padding: 10px 50px 10px 25px;
+
   display: flex;
   align-items: center;
   justify-content: left;
   gap: 15px;
+  margin-right: 25px;
+  & h1 {
+    font-size: 18px;
+  }
 `;

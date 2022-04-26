@@ -2,13 +2,15 @@ import styled from "styled-components";
 import imgsrc from "../../Assets/Images/3.png";
 
 function CardGrande(props) {
+  const { data } = props;
+  const imgUrl = data.corpo.match(/!\[.*?\]\((.*?)\)/)[1];
   return (
     <S_div>
       <S_imgDiv>
-        <S_img src={imgsrc} alt="placeholder" />
+        <S_img src={imgUrl} alt="placeholder" />
       </S_imgDiv>
       <S_infoDiv>
-        <h2>Titulo</h2>
+        <h2>{data.titulo}</h2>
       </S_infoDiv>
     </S_div>
   );
@@ -28,9 +30,10 @@ const S_imgDiv = styled.div`
   width: inherit;
   overflow: hidden;
   height: 65%;
+  padding: 10px;
 `;
 const S_img = styled.img`
-  width: inherit;
+  width: 100%;
 `;
 const S_infoDiv = styled.div`
   padding: 15px;
