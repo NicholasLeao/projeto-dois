@@ -4,6 +4,9 @@ import CardMedio from "./card-m";
 import CardPequeno from "./card-p";
 import axios from "axios";
 import { useState, useCallback, useEffect } from "react";
+
+
+
 export function Cards() {
   // STATES
   const [cardData, SetCardData] = useState([]);
@@ -14,12 +17,6 @@ export function Cards() {
       const { data } = await axios.get(
         "https://ironrest.herokuapp.com/projetodoiswillnick"
       );
-      // for (let i = 0; i < data.length; i++) {
-      //   const rng = Math.floor(Math.random() * data.length);
-      //   let mem = data[i];
-      //   data[i] = data[rng];
-      //   data[rng] = mem;
-      // }
       SetCardData(data);
     } catch (err) {}
   }, []);
