@@ -1,16 +1,18 @@
 import styled from "styled-components";
 import imgsrc from "../../Assets/Images/3.png";
 
-function CardMedio() {
+function CardMedio(props) {
+  const { data } = props;
+  const imgUrl = data.corpo.match(/!\[.*?\]\((.*?)\)/)[1];
   const rng = Math.random() > 0.5;
   const rng2 = Math.random() > 0.5;
   return (
     <S_div>
-      {!rng ? <h3>Titulo</h3> : ""}
+      {!rng ? <h3>{data.titulo}</h3> : ""}
       <S_imgDiv>
-        <S_img src={imgsrc} alt="placeholder" />
+        <S_img src={imgUrl} alt="placeholder" />
       </S_imgDiv>
-      {rng ? <h3>Titulo</h3> : ""}
+      {rng ? <h3>{data.titulo}</h3> : ""}
     </S_div>
   );
 }
@@ -39,4 +41,5 @@ const S_imgDiv = styled.div`
 const S_img = styled.img`
   /* object-fit: scale-down; */
   /* object-fit: cover; */
+  height: inherit;
 `;
