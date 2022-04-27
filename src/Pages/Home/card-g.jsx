@@ -8,51 +8,76 @@ function CardGrande(props) {
     <S_div>
       <S_infoDiv>
         <h2>{data.titulo}</h2>
+        <hr></hr>
       </S_infoDiv>
+      <S_gradient />
       <S_imgDiv>
-        <S_img src={imgUrl} alt="placeholder" />
+        <img src={imgUrl} alt="placeholder" />
       </S_imgDiv>
     </S_div>
   );
 }
 export default CardGrande;
 
+const S_gradient = styled.div`
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  object-fit: cover;
+
+  /* COLOR */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 28%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0.1;
+  /*  */
+`;
+
 const S_div = styled.div`
+  /* border: 1px solid #ebba3e; */
   resize: none;
   width: 23rem;
   height: 12rem;
-  /* border: 2px solid #ebba3e; */
   border-radius: 15px;
+  position: relative;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
-  position: relative;
 `;
 
 const S_imgDiv = styled.div`
   width: inherit;
-  /* overflow: hidden; */
-  height: 100%;
-  /* padding: 10px; */
-  position: absolute;
+  height: inherit;
+  object-fit: cover;
+  position: relative;
   top: 0;
 
-  background-size: cover;
-  object-fit: cover;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  & img {
+    position: absolute;
+    height: 100%;
+    opacity: 0.5;
+  }
 `;
-const S_img = styled.img`
-  height: 100%;
-  opacity: 0.2;
-`;
+
 const S_infoDiv = styled.div`
   position: absolute;
   z-index: 10;
-  padding: 15px;
-  font-size: 16px;
-  /* & h2 {
-    color: black;
-  } */
+  margin-top: 15px;
+  margin: 15px;
+  & h2 {
+    font-size: 32px;
+    margin-right: 15px;
+    margin: 0;
+  }
+  & hr {
+    background-color: #ebba3e;
+    height: 3px;
+    border: none;
+  }
 `;
