@@ -25,6 +25,7 @@ const SCardDiv = styled.div`
   width: 530px;
   height: 280px;
   border: 3px solid #ebba3e;
+  background-color: #171714;
   border-radius: 22px;
   overflow: hidden;
 

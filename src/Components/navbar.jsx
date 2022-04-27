@@ -29,7 +29,7 @@ export default Navbar;
 
 const SNav = styled.nav`
   font-family: "Roboto", sans-serif;
-
+  z-index: 1;
   padding: 20px 0 35px 0;
 `;
 
@@ -38,6 +38,7 @@ const SBtnDiv = styled.div`
   padding: 3px 15px;
   height: 18px;
   border: 2px solid #ebba3e;
+  background-color: #171714;
   border-radius: 15px;
   cursor: pointer;
 `;

@@ -10,6 +10,8 @@ export function Home() {
       </SCarrosselDiv>
 
       <Cards />
+
+      <S_gradient />
     </>
   );
 }
@@ -25,4 +27,14 @@ const SCarrosselDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+const S_gradient = styled.div`
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 140%;
+  z-index: 0;
+  background: rgb(235, 186, 62);
+  background: linear-gradient(180deg, #c49a2f 65%, rgba(235, 186, 62, 0) 100%);
 `;
