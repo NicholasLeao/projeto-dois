@@ -22,24 +22,30 @@ export default CardMedio;
 const S_div = styled.div`
   width: 10rem;
   height: 14rem;
-  border: 2px solid #ebba3e;
+  /* border: 2px solid #ebba3e; */
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgb(35,35,25);
+  background: linear-gradient(180deg, rgba(35,35,25,0.1) 0%, rgba(30,30,20,1) 50%, rgba(30,30,20,0.1) 100%);
+  /*box-shadow: 5px 5px 5px black;*/
 `;
 
 const S_imgDiv = styled.div`
   overflow: hidden;
   border-radius: 15px;
-  height: 50%;
-  width: 80%;
+  height: 60%;
+  width: 85%;
   margin: 10px 0;
+  
   /* object-fit: scale-down; */
 `;
 const S_img = styled.img`
   /* object-fit: scale-down; */
   /* object-fit: cover; */
-  height: inherit;
+  height: 100%;
+  width: 100%;
+
 `;
