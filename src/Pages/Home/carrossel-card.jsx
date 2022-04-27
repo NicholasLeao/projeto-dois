@@ -24,9 +24,11 @@ export default CarrosselCard;
 const SCardDiv = styled.div`
   width: 530px;
   height: 280px;
-  border: 3px solid #ebba3e;
+  /* border: 3px solid #ebba3e; */
+  background-color: #171714;
   border-radius: 22px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
 
   display: flex;
   flex-direction: column;
