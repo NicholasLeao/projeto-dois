@@ -56,11 +56,12 @@ const StyledDiv = styled.div`
     /* COLOR */
     background: rgb(255, 255, 255);
     background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 1) 28%,
+      180deg,
+      #000000 0%,
       rgba(0, 0, 0, 0) 100%
     );
-    opacity: 0.2;
+    opacity: 0.6;
+    z-index: 1;
     /*  */
   }
 
@@ -79,7 +80,7 @@ const StyledDiv = styled.div`
     & img {
       position: absolute;
       height: 100%;
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 `;

@@ -23,8 +23,8 @@ export default App;
 const AppContainer = styled.div`
   * {
     font-family: "Roboto", sans-serif;
-
   }
+  
   width: auto;
   height: fit-content;
 
