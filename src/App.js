@@ -6,6 +6,7 @@ import styled from "styled-components";
 function App() {
   return (
     <AppContainer className="App">
+      
       <Navbar />
 
       <Routes>
@@ -28,7 +29,7 @@ const AppContainer = styled.div`
   width: auto;
   height: fit-content;
 
-  background-color: #171714;
+
 
   display: flex;
   flex-direction: column;

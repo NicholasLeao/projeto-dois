@@ -11,7 +11,7 @@ export function Home() {
 
       <Cards />
 
-      <S_gradient />
+      
     </>
   );
 }
@@ -19,6 +19,7 @@ export function Home() {
 export default Home;
 
 // ========== STYLED COMPONENTS ==============================
+
 const SCarrosselDiv = styled.div`
   width: 100%;
   border: 2px solid red;
@@ -35,6 +36,4 @@ const S_gradient = styled.div`
   width: 100%;
   height: 140%;
   z-index: 0;
-  background: rgb(235, 186, 62);
-  background: linear-gradient(180deg, #c49a2f 65%, rgba(235, 186, 62, 0) 100%);
 `;

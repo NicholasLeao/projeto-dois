@@ -57,7 +57,7 @@ export default Cards;
 // ========== STYLED COMPONENTS ==============================
 const SDiv = styled.div`
   width: 800px;
-  background-color: #242221;
+  //background-color:;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
   border-radius: 22px;
   height: fit-content;
