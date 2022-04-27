@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import { useState, useEffect } from "react";
 import styles from "../../Styles/markdown.module.css";
+
 import axios from "axios";
 
 export function NewProject() {
@@ -105,7 +106,11 @@ export function NewProject() {
           ></S_input>
           <S_SubmitBtn onClick={handleClickSubmit}>CONFIRMAR</S_SubmitBtn>
         </S_Hud>
+        
       </S_Div>
+
+      
+
     </form>
   );
 }
@@ -119,10 +124,10 @@ const S_Div = styled.div`
   border: 3px solid #ebba3e;
   border-radius: 22px;
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 `;
 
 const S_Hud = styled.div`
@@ -163,8 +168,12 @@ const S_SubmitBtn = styled.button`
 
 const S_textarea = styled.textarea`
   resize: none;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #171714;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 0) 70%,
+    rgba(23, 20, 23, 0.723) 100%
+  );
   width: 98%;
   height: 600px;
   padding: 10px;
@@ -185,3 +194,7 @@ const S_tituloDiv = styled.div`
   margin-bottom: 20px;
   text-align: left;
 `;
+
+
+
+

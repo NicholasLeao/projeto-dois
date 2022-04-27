@@ -11,7 +11,7 @@ export function Navbar() {
         </SLi>
         <SLi>
           <SBtnDiv>
-            <SBtn>NAV2</SBtn>
+          <SBtn>NAV2</SBtn>
           </SBtnDiv>
         </SLi>
         <SLi>
