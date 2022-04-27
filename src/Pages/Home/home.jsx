@@ -1,7 +1,7 @@
 import Carrossel from "./carrossel";
 import Cards from "./cards";
 import styled from "styled-components";
-
+import arcadeImg from "../../Assets/Images/arcade.jpg";
 export function Home() {
   return (
     <>
@@ -11,7 +11,7 @@ export function Home() {
 
       <Cards />
 
-      <S_gradient />
+      <S_hero src={arcadeImg} alt="hero" />
     </>
   );
 }
@@ -29,12 +29,18 @@ const SCarrosselDiv = styled.div`
   justify-content: center;
 `;
 
-const S_gradient = styled.div`
+const S_hero = styled.img`
   position: absolute;
   object-fit: cover;
-  width: 100%;
-  height: 140%;
+  height: 170%;
   z-index: 0;
-  background: rgb(235, 186, 62);
-  background: linear-gradient(180deg, #c49a2f 65%, rgba(235, 186, 62, 0) 100%);
+
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
 `;
