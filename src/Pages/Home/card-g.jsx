@@ -28,7 +28,7 @@ const StyledDiv = styled.div`
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
 
-  // ==== INFO ====================
+  // ==== INFO
   & .info {
     position: absolute;
     z-index: 10;
@@ -46,7 +46,7 @@ const StyledDiv = styled.div`
     }
   }
 
-  // ==== GRADIENT ====================
+  // ==== GRADIENT
   & .gradient {
     width: inherit;
     height: inherit;
@@ -64,7 +64,7 @@ const StyledDiv = styled.div`
     /*  */
   }
 
-  // ==== IMAGE ====================
+  // ==== IMAGE
   & .img-container {
     width: inherit;
     height: inherit;
