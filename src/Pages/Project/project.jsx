@@ -1,17 +1,43 @@
 import axios from "axios";
 import { useState, useCallback, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import styles from "../../Styles/markdown.module.css";
+import React from "react";
 
 export function Project() {
+  const navigate = useNavigate();
   const { id } = useParams();
-  console.log(id);
   // STATES
   const [cardData, SetCardData] = useState([]);
+  const [passwordState, setPasswordState] = useState("");
+
+  // HANDLERS
+  const handlePasswordChange = (e) => {
+    setPasswordState(e.target.value);
+  };
+  const handleEditBtn = (e) => {
+    e.preventDefault();
+    if (cardData.senha === passwordState) {
+      navigate(`/edit-project/${cardData._id}`);
+    }
+  };
+  const handleExcluir = (e) => {
+    if (cardData.senha === passwordState) {
+      deletePost();
+      navigate(`/`);
+    }
+  };
 
   // SIDE EFFECTS
+  const deletePost = useCallback(async () => {
+    try {
+      await axios.delete(
+        `https://ironrest.herokuapp.com/projetodoiswillnick/${id}`
+      );
+    } catch (err) {}
+  }, []);
   const fetchData = useCallback(async () => {
     try {
       const { data } = await axios.get(
@@ -28,9 +54,20 @@ export function Project() {
   // ==== JSX ========================================
   return (
     <S_Div>
-      <ReactMarkdown className={styles.markdown +" "+styles.project}>
+      <ReactMarkdown className={styles.markdown + " " + styles.project}>
         {cardData.corpo}
       </ReactMarkdown>
+      <S_hud>
+        <input
+          name="password"
+          onChange={handlePasswordChange}
+          value={passwordState}
+          type="password"
+          placholder="Senha"
+        ></input>
+        <button onClick={handleEditBtn}>Editar</button>
+        <button onClick={handleExcluir}>Excluir</button>
+      </S_hud>
     </S_Div>
   );
 }
@@ -48,4 +85,28 @@ const S_Div = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const S_hud = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  & button {
+    background-color: none;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 0px 20px;
+    height: 30px;
+  }
+
+  & input {
+    background-color: none;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 0px 20px;
+    height: 30px;
+  }
 `;
