@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Home from "../Assets/Images/botao-home.png"
+import Add from "../Assets/Images/addgame.png"
+import Logo from "../Assets/Images/logo.png"
 
 export function Navbar() {
   return (
@@ -8,13 +10,18 @@ export function Navbar() {
       <SUl>
         <SLi>
           <SBtnDiv1>
-            <Link to="/"><SBtn><img src={Home} alt="botao-home"/></SBtn></Link>
+            <Link to="/"><SBtn1><img src={Home} alt="botao-home"/></SBtn1></Link>
           </SBtnDiv1>
         </SLi>
         <SLi>
-          <SBtnDiv>
-          <Link to="/new-project"><SBtn>CADASTRAR NOVO JOGO!</SBtn></Link>
-          </SBtnDiv>
+          <SBtnDiv2>
+            <Link to="/"><SBtn2><img src={Logo} alt="logo"/></SBtn2></Link>
+          </SBtnDiv2>
+        </SLi>
+        <SLi>
+          <SBtnDiv1>
+          <Link to="/new-project"><SBtn3><img src={Add} alt="botao-add"/></SBtn3></Link>
+          </SBtnDiv1>
         </SLi>
       </SUl>
     </SNav>
@@ -27,30 +34,22 @@ export default Navbar;
 const SNav = styled.nav`
   font-family: "Roboto", sans-serif;
   z-index: 1;
-  padding: 20px 0 35px 0;
+  padding: 20px 0 35px 0; 
 `;
 
-const SBtnDiv = styled.div`
-  width: fit-content;
-  padding: 10px 15px;
-  height: 18px;
-  border: 2px solid #ebba3e;
-  background-color: #171714;
-  border-radius: 15px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-left: -20px;
+const SBtnDiv2 = styled.div`
+  cursor: pointer; 
 `;
-
 const SBtnDiv1 = styled.div`
   width: fit-content;
   padding: 0px 15px;
   height: 18px;
   border-radius: 15px;
   cursor: pointer;
+  justify-content: space-around;
 `;
 
-const SBtn = styled.button`
+const SBtn1 = styled.button`
   background: none;
   border: none;
   color: #ebba3e;
@@ -59,7 +58,34 @@ const SBtn = styled.button`
   margin-top: -5px;
 
   & img {
-    width: 70px;
+    width: 90px;
+  }
+`;
+
+const SBtn2 = styled.button`
+  background: none;
+  border: none;
+  & img {
+    width: 500px;
+    margin-left: 219px;
+    margin-top: -150px;
+    margin-bottom: -200px;
+    
+    
+  }
+`
+
+const SBtn3 = styled.button`
+  background: none;
+  border: none;
+  color: #ebba3e;
+  cursor: pointer;
+  font-size: 25px;
+  margin-top: -5px;
+
+  & img {
+    width: 90px;
+    margin-left: 200px;
   }
 `;
 

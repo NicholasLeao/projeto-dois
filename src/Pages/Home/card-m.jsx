@@ -25,8 +25,8 @@ export default CardMedio;
 // ========== STYLED COMPONENTS ==============================
 
 const S_div = styled.div`
-  width: 12rem;
-  height: 15rem;
+  width: 10rem;
+  height: 13rem;
   /* border: 3px solid #ebba3e; */
   background-color: transparent;
   border-radius: 22px;
@@ -62,7 +62,7 @@ const STextDiv = styled.div`
 `;
 
 const SH2 = styled.h2`
-  font-size: 25px;
+  font-size: 20px;
   text-align:center;
   
  
