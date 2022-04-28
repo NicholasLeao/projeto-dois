@@ -62,7 +62,7 @@ export function NewProject() {
             onChange={handleChangeForm}
             name="titulo"
             type="text"
-            placeholder="Insira o nome aqui"
+            placeholder="INSIRA O NOME AQUI"
           ></S_input>
         </S_tituloDiv>
         <S_Hud>
@@ -102,7 +102,7 @@ export function NewProject() {
             onChange={handleChangeForm}
             name="senha"
             type="password"
-            placeholder="Senha"
+            placeholder="SENHA"
           ></S_input>
           <S_SubmitBtn onClick={handleClickSubmit}>CONFIRMAR</S_SubmitBtn>
         </S_Hud>
@@ -177,15 +177,29 @@ const S_textarea = styled.textarea`
   width: 98%;
   height: 600px;
   padding: 10px;
+  border: 1px solid #ebba3e;
 `;
 
 const S_input = styled.input`
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #171714;
+  border: 1px solid #ebba3e;
+  //background-color: #171714;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 0) 70%,
+    rgba(23, 20, 23, 0.723) 100%
+  );
   max-width: inherit;
   padding: 10px 0 10px 10px;
   margin-top: 10px;
+  border-radius: 8px;
+  
+
+  ::placeholder {
+    color: #ebba3e;
+  }
 `;
+
 
 const S_tituloDiv = styled.div`
   width: 100%;
