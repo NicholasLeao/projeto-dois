@@ -11,6 +11,7 @@ function CardMedio(props) {
         <SImg src={imgUrl} alt="placeholder" />
         <STextDiv>
           <SH2>{data.titulo}</SH2>
+          <SHr></SHr>
         </STextDiv>
       </SCardImgDiv>
       
@@ -57,4 +58,12 @@ const SH2 = styled.h2`
   font-size: 25px;
   margin-top: 10px;
 `;
+const SHr = styled.hr`
+  background-color: #ebba3e;
+      height: 2px;
+      width: 100px;
+      border: none;
+`
+  
+
 

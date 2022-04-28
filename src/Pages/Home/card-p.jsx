@@ -30,7 +30,6 @@ const S_div = styled.div`
   border-radius: 15px;
   padding: 10px 18px 10px 0px;
   position: relative;
-
   background: rgb(63, 63, 64);
   background: linear-gradient(180deg, #282829 0%, #19191a 100%);
 

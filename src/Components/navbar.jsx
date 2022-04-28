@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export function Navbar() {
@@ -11,7 +12,7 @@ export function Navbar() {
         </SLi>
         <SLi>
           <SBtnDiv>
-          <SBtn>NAV2</SBtn>
+          <Link to="/new-project"><SBtn>CADASTRAR NOVO JOGO!</SBtn></Link>
           </SBtnDiv>
         </SLi>
         <SLi>
@@ -35,7 +36,7 @@ const SNav = styled.nav`
 
 const SBtnDiv = styled.div`
   width: fit-content;
-  padding: 3px 15px;
+  padding: 10px 15px;
   height: 18px;
   border: 2px solid #ebba3e;
   background-color: #171714;
@@ -48,6 +49,9 @@ const SBtn = styled.button`
   border: none;
   color: #ebba3e;
   cursor: pointer;
+  font-size: 25px;
+  margin-top: -5px;
+  
 `;
 
 const SLi = styled.li`
