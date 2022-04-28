@@ -63,10 +63,10 @@ export function Project() {
           onChange={handlePasswordChange}
           value={passwordState}
           type="password"
-          placholder="Senha"
+          placeholder="INSIRA SUA SENHA"
         ></input>
-        <button onClick={handleEditBtn}>Editar</button>
-        <button onClick={handleExcluir}>Excluir</button>
+        <button onClick={handleEditBtn}>EDITAR</button>
+        <button onClick={handleExcluir}>EXCLUIR</button>
       </S_hud>
     </S_Div>
   );
@@ -95,18 +95,25 @@ const S_hud = styled.div`
   gap: 20px;
 
   & button {
-    background-color: none;
-    border: 2px solid red;
+    background-color: transparent;
+    border: 2px solid #ebba3e;
     border-radius: 15px;
     padding: 0px 20px;
     height: 30px;
+    color: #ebba3e;
+    margin-top: 20px;
   }
 
   & input {
-    background-color: none;
-    border: 2px solid red;
+    background-color: transparent;
+    border: 2px solid #ebba3e;
     border-radius: 15px;
     padding: 0px 20px;
     height: 30px;
+    margin-top: 20px;
+    
+    ::placeholder {
+      color:#ebba3e ;
+    }
   }
 `;

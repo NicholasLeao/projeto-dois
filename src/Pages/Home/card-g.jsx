@@ -8,7 +8,6 @@ function CardGrande(props) {
     <StyledDiv>
       <div className="info">
         <h2>{data.titulo}</h2>
-        <hr></hr>
       </div>
       <div className="gradient" />
       <div className="img-container">
@@ -36,6 +35,9 @@ const StyledDiv = styled.div`
     margin-top: 15px;
     margin: 15px;
     & h2 {
+      padding: 0 5px;
+      background: linear-gradient(to top right, #29155c, #db1880);
+      border-radius: 15px;
       font-size: 32px;
       margin-right: 15px;
       margin: 0;

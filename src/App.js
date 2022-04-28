@@ -30,6 +30,7 @@ export default App;
 const AppContainer = styled.div`
   * {
     font-family: "Roboto", sans-serif;
+    text-decoration: none;
   }
 
   width: auto;
