@@ -12,7 +12,8 @@ export default Footer;
 
 
 const SH3 = styled.h3`
-font-family: 'Parisienne', cursive;
+font-family: 'Calligraffitti', cursive;
+letter-spacing: 5px;
 margin-top: 50px;
 
 `

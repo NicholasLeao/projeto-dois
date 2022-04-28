@@ -32,7 +32,7 @@ export function NewProject() {
     e.preventDefault();
     setSubmitProjectState(projectState);
   
-  navigate("/");
+  //navigate("/");
   
   };
 
