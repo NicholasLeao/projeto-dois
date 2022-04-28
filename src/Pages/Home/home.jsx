@@ -19,6 +19,7 @@ export function Home() {
 export default Home;
 
 // ========== STYLED COMPONENTS ==============================
+
 const SCarrosselDiv = styled.div`
   width: 100%;
   border: 2px solid red;
