@@ -4,17 +4,17 @@ import arcadeImg from "./Assets/Images/arcade.jpg";
 import Navbar from "./Components/navbar";
 import styled from "styled-components";
 import Footer from "./Components/Footer";
+import EditProject from "./Pages/EditProject/edit-project";
 
 function App() {
   return (
     <AppContainer className="App">
-      
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/:id" element={<Project />} />
-        <Route path="/edit-project/:id" element={null} />
+        <Route path="/edit-project/:id" element={<EditProject />} />
         <Route path="/new-project" element={<NewProject />} />
       </Routes>
 
@@ -31,11 +31,9 @@ const AppContainer = styled.div`
   * {
     font-family: "Roboto", sans-serif;
   }
-  
+
   width: auto;
   height: fit-content;
-
-
 
   display: flex;
   flex-direction: column;
@@ -47,7 +45,6 @@ const S_hero = styled.img`
   object-fit: cover;
   height: 170%;
   z-index: -1;
-  
 
   -webkit-mask-image: -webkit-gradient(
     linear,
@@ -56,5 +53,9 @@ const S_hero = styled.img`
     from(rgba(0, 0, 0, 1)),
     to(rgba(0, 0, 0, 0))
   );
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0)
+  );
 `;

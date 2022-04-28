@@ -4,6 +4,7 @@ import CardMedio from "./card-m";
 import CardPequeno from "./card-p";
 import axios from "axios";
 import { useState, useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function Cards() {
   // STATES
@@ -28,7 +29,11 @@ export function Cards() {
       <div className="row">
         {cardData.map((data, idx) => {
           if (idx <= 1) {
-            return <CardGrande data={data} key={"g" + idx} />;
+            return (
+              <Link to={`/project/${data._id}`}>
+                <CardGrande data={data} key={"g" + idx} />
+              </Link>
+            );
           }
         })}
       </div>
@@ -36,7 +41,11 @@ export function Cards() {
       <div className="row">
         {cardData.map((data, idx) => {
           if (idx >= 3 && idx <= 6) {
-            return <CardMedio data={data} key={"m" + idx} />;
+            return (
+              <Link to={`/project/${data._id}`}>
+                <CardMedio data={data} key={"m" + idx} />
+              </Link>
+            );
           }
         })}
       </div>
@@ -44,7 +53,11 @@ export function Cards() {
       <div className="row row-left">
         {cardData.map((data, idx) => {
           if (idx >= 8 && idx <= 11) {
-            return <CardPequeno data={data} key={"s" + idx} />;
+            return (
+              <Link to={`/project/${data._id}`}>
+                <CardPequeno data={data} key={"s" + idx} />
+              </Link>
+            );
           }
         })}
       </div>
@@ -65,7 +78,6 @@ const SDiv = styled.div`
     rgba(63, 94, 251, 0) 70%,
     rgba(23, 20, 23, 0.723) 100%
   );
-
 
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
   border-radius: 22px;
