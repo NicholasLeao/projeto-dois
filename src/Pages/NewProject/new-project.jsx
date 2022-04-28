@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"
 import styles from "../../Styles/markdown.module.css";
 
 import axios from "axios";
@@ -15,6 +16,8 @@ export function NewProject() {
   });
   const [submitProjectState, setSubmitProjectState] = useState({});
 
+  const navigate = useNavigate();
+
   // EVENT HANDLERS
   const handlePreviewClick = (e) => {
     e.preventDefault();
@@ -28,6 +31,9 @@ export function NewProject() {
   const handleClickSubmit = (e) => {
     e.preventDefault();
     setSubmitProjectState(projectState);
+  
+  navigate("/");
+  
   };
 
   // SIDE EFFECT

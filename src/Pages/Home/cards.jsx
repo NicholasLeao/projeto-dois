@@ -88,6 +88,7 @@ const SDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
   // ==== ROWS
   & .row {
