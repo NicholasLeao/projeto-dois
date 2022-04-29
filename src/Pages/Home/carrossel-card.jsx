@@ -7,10 +7,9 @@ function CarrosselCard() {
       <SCardImgDiv>
         <SImg src={Jokenpo} alt="Will's Game" />
         <STextDiv>
-          <SH2>Titulo do card</SH2>
+          <SH2>Will's Jokenpô</SH2>
           <p>
-            Descricao do card, algumas coisas que poderiam estar escritas aqui
-            para ocupar espaco.
+            Jogo clássico, mas feito de jeito um diferente. DIVIRTA-SE!
           </p>
         </STextDiv>
       </SCardImgDiv>
@@ -49,8 +48,9 @@ const SImg = styled.img`
 
 const SH2 = styled.h2`
   margin-bottom: 5px;
+  font-size: 40px;
 `;
 
 const STextDiv = styled.div`
-  padding: 10px 20px;
+  padding: 20px 20px;
 `;
