@@ -21,6 +21,7 @@
 }
 .markdown p {
   text-align: left;
+  margin-top: 20px;
 }
 
 .markdown h1 {
