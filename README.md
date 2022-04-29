@@ -2,7 +2,7 @@
 
 Esse projeto foi iniciado com [Create React App](https://github.com/facebook/create-react-app).
 
-## Sobre o projeto
+### `SOBRE O PROJETO`
 
 GameLand.JS é uma plataforma que reúne games escritos com JAVASCRIPT.  Você pode add seus games ou jogar os games já disponíveis!
 
