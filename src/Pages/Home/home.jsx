@@ -5,9 +5,6 @@ import arcadeImg from "../../Assets/Images/arcade.jpg";
 export function Home() {
   return (
     <>
-      <SCarrosselDiv>
-        <Carrossel />
-      </SCarrosselDiv>
 
       <Cards />
 
